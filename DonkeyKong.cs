@@ -4,6 +4,6 @@ public class DonkeyKong : Character
 
     public override string Display()
     {
-        return $"Id: {Id}\nName: {Name}\nDescription: {Description}\n Species: {string.Join(", ", Species)}\n";
+        return $"Id{Id}\nSpecies: {string.Join(", ", Species)}Name: {Name}\nDescription: {Description}\n";
     }
 }

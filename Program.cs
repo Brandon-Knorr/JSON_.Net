@@ -26,6 +26,15 @@ if (File.Exists(donkeyKongFileName))
   donkeyKongs = JsonSerializer.Deserialize<List<DonkeyKong>>(File.ReadAllText(donkeyKongFileName))!;
   logger.Info($"File deserialized {donkeyKongFileName}");
 }
+//deserialize Street Fighter characters
+string streetFighterFileName = "sf2.json";
+List<StreetFighter> streetFighters = [];
+//check if file exists
+if(File.Exists(streetFighterFileName))
+{
+  streetFighters = JsonSerializer.Deserialize<List<StreetFighter>>(File.ReadAllText(streetFighterFileName))!;
+  logger.Info($"File Deserialized {streetFighterFileName}");
+}
 do
 {
   // display choices to user
