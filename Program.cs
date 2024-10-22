@@ -112,7 +112,10 @@ do
   }
    else if (choice == "7")
   {
-    // display all sf2 character
+     foreach(var c in streetFighters)
+    {
+      Console.WriteLine(c.Display());
+    }
   }
    else if (choice == "8")
   {
