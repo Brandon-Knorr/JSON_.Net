@@ -1,6 +1,6 @@
 public class DonkeyKong : Character
 {
-    public List<string> Species { get; set; } = [];
+    public String Species { get; set; } = "";
 
     public override string Display()
     {
