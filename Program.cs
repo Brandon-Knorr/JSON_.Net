@@ -17,6 +17,15 @@ if (File.Exists(marioFileName))
   marios = JsonSerializer.Deserialize<List<Mario>>(File.ReadAllText(marioFileName))!;
   logger.Info($"File deserialized {marioFileName}");
 }
+// deserialize donkeykong json form file to list
+string donkeyKongFileName = "dk.json";
+List<DonkeyKong> donkeyKongs = [];
+// check if file exists
+if (File.Exists(donkeyKongFileName))
+{
+  donkeyKongs = JsonSerializer.Deserialize<List<DonkeyKong>>(File.ReadAllText(donkeyKongFileName))!;
+  logger.Info($"File deserialized {donkeyKongFileName}");
+}
 do
 {
   // display choices to user
