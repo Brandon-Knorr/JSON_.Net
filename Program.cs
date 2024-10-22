@@ -97,7 +97,10 @@ do
   } 
   else if (choice == "4")
   {
-    // display all dk characters
+     foreach(var c in donkeyKongs)
+    {
+      Console.WriteLine(c.Display());
+    }
   }
   else if (choice == "5")
   {
