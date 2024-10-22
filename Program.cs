@@ -127,7 +127,15 @@ do
   }
    else if (choice == "8")
   {
-    // add sf2 character
+    StreetFighter streetFighter = new()
+    {
+      Id = streetFighters.Count == 0 ? 1 : streetFighters.Max(c => c.Id) + 1
+    };
+    InputCharacter(streetFighter);
+    // Add Character
+    streetFighters.Add(streetFighter);
+    File.WriteAllText(streetFighterFileName, JsonSerializer.Serialize(streetFighters));
+    logger.Info($"Character added: {streetFighter.Name}");
   }
    else if (choice == "9")
   {
