@@ -104,7 +104,15 @@ do
   }
   else if (choice == "5")
   {
-    // add dk character
+     DonkeyKong donkeyKong = new()
+    {
+      Id = donkeyKongs.Count == 0 ? 1 : donkeyKongs.Max(c => c.Id) + 1
+    };
+    InputCharacter(donkeyKong);
+    // Add Character
+    donkeyKongs.Add(donkeyKong);
+    File.WriteAllText(donkeyKongFileName, JsonSerializer.Serialize(donkeyKongs));
+    logger.Info($"Character added: {donkeyKong.Name}");
   }
    else if (choice == "6")
   {
